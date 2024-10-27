@@ -2,6 +2,7 @@
 A simple room temperature, humidity, pressure and VOC monitor using BME680 , Pi Pico and Waveshare 2.9" Pico E-ink display
 
 AQI implemented using VOC sensor in BME680.
+Please note it takes 300seconds for the AQI to calibrate, hence the display will refresh/ or start after 300seconds of starting, and then will refresh every minute.
 
 ![IMG_1722](https://github.com/user-attachments/assets/9de5ebf1-a304-4b54-928d-3e5fd87a94d5)
 ![IMG_1714](https://github.com/user-attachments/assets/cfca3cd2-95ea-4eec-9d3a-ff9ad810da43)
