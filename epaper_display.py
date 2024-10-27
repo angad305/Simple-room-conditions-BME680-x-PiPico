@@ -19,9 +19,9 @@ class EpaperDisplay:
             box_width = EPD_WIDTH
             box_height = EPD_HEIGHT // 4
 
-            temp = str(temperature) + ' C'
-            humidity = str(humi) + ' %'
-            pressure = str(pres) + ' hPa'
+            temp = str(round(temperature, 1)) + ' C'
+            humidity = str(round(humidity, 1)) + ' %'
+            pressure = str(round(pressure, 1)) + ' hPa'
             quality = quality
             
             # Draw boxes and labels
