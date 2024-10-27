@@ -13,15 +13,15 @@ class EpaperDisplay:
         self.epd = EPD_2in9()
         self.epd.init()
 
-    def update_display(self, temperature,pressure,humidity,quality):
+    def update_display(self, temperature,humi,pres,quality):
         try:
             self.epd.image1Gray_Portrait.fill(0xff)  # Clear the display buffer
             box_width = EPD_WIDTH
             box_height = EPD_HEIGHT // 4
 
             temp = str(temperature) + ' C'
-            humidity = str(pressure) + ' %'
-            pressure = str(humidity) + ' hPa'
+            humidity = str(humi) + ' %'
+            pressure = str(pres) + ' hPa'
             quality = quality
             
             # Draw boxes and labels
