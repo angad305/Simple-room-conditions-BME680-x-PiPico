@@ -18,11 +18,11 @@ class EpaperDisplay:
             self.epd.image1Gray_Portrait.fill(0xff)  # Clear the display buffer
             box_width = EPD_WIDTH
             box_height = EPD_HEIGHT // 4
-
-            temp = str(round(temperature, 1)) + ' C'
-            humidity = str(round(humidity, 1)) + ' %'
-            pressure = str(round(pressure, 1)) + ' hPa'
-            quality = quality
+            
+            temp = temperature if temperature == "calibrating..." else str(round(temperature, 1)) + ' C'
+            humidity = humi if humi == "calibrating..." else str(round(humi, 0)) + ' %'
+            pressure = pres if pres == "calibrating..." else str(round(pres, 1)) + ' hPa'
+            quality = quality if quality == "calibrating..." else str(quality) 
             
             # Draw boxes and labels
             for i in range(4):
